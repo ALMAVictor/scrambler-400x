@@ -171,7 +171,7 @@ function App() {
               {/* CTA Buttons - Premium Liquid Glass */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                 <button 
-                  className="group relative text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/40 text-base md:text-lg overflow-hidden"
+                  className="group relative text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/40 text-base md:text-lg overflow-hidden button-premium-shine button-premium-pulse button-ripple"
                   style={{
                     background: 'rgba(12, 15, 18, 0.35)',
                     backdropFilter: 'blur(20px) saturate(180%)',
@@ -180,24 +180,26 @@ function App() {
                     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
-                    e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.25)'
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.4)'
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(243, 244, 242, 0.3), 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
                     e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)'
                   }}
                   aria-label="Agende um test-ride"
                 >
                   <span className="flex items-center gap-2 relative z-10">
                     Agende um test-ride
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </span>
                 </button>
                 <button 
-                  className="group relative border text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg overflow-hidden"
+                  className="group relative border text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg overflow-hidden button-premium-shine button-ripple"
                   style={{
                     background: 'rgba(12, 15, 18, 0.25)',
                     backdropFilter: 'blur(20px) saturate(180%)',
@@ -206,12 +208,14 @@ function App() {
                     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.25)'
-                    e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.boxShadow = '0 0 15px rgba(243, 244, 242, 0.2), 0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.25)'
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.15)'
                     e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)'
                   }}
                   aria-label="Ver galeria"
                   onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
@@ -219,7 +223,7 @@ function App() {
                   <span className="relative z-10">Ver galeria</span>
                 </button>
                 <button 
-                  className="group relative border text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg overflow-hidden"
+                  className="group relative border text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg overflow-hidden button-premium-shine button-ripple"
                   style={{
                     background: 'rgba(12, 15, 18, 0.25)',
                     backdropFilter: 'blur(20px) saturate(180%)',
@@ -228,12 +232,14 @@ function App() {
                     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.25)'
-                    e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.boxShadow = '0 0 15px rgba(243, 244, 242, 0.2), 0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.25)'
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.15)'
                     e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)'
                   }}
                   aria-label="Ver ficha técnica"
                   onClick={() => document.getElementById('specs')?.scrollIntoView({ behavior: 'smooth' })}
@@ -263,7 +269,13 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image Viewer */}
             <div className="relative">
-              <div className="relative aspect-square bg-white rounded-2xl overflow-hidden border border-titanium-gray/20 shadow-lg">
+              <div 
+                className="relative aspect-square bg-white rounded-3xl overflow-hidden transition-all duration-300"
+                style={{
+                  border: '2px solid rgba(243, 244, 242, 0.6)',
+                  boxShadow: '0 0 20px rgba(243, 244, 242, 0.3), 0 0 40px rgba(243, 244, 242, 0.15), 0 12px 48px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(243, 244, 242, 0.4)'
+                }}
+              >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img 
                     src={colorOptions.find(c => c.id === selectedColor)?.image || '/scrambler-sem-fundo.avif'}
@@ -286,11 +298,32 @@ function App() {
                     <button
                       key={color.id}
                       onClick={() => setSelectedColor(color.id)}
-                      className={`group relative p-4 rounded-xl border-2 transition-all duration-300 ${
-                        selectedColor === color.id
-                          ? 'border-warm-white/40 bg-carbon-black/60'
-                          : 'border-titanium-gray/20 bg-graphite-deep/50 hover:border-titanium-gray/40'
-                      }`}
+                      className="group relative p-4 rounded-2xl border-2 transition-all duration-300 overflow-hidden"
+                      style={{
+                        background: selectedColor === color.id 
+                          ? 'rgba(12, 15, 18, 0.5)' 
+                          : 'rgba(12, 15, 18, 0.3)',
+                        backdropFilter: 'blur(20px) saturate(180%)',
+                        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                        border: selectedColor === color.id
+                          ? '2px solid rgba(243, 244, 242, 0.6)'
+                          : '2px solid rgba(243, 244, 242, 0.2)',
+                        boxShadow: selectedColor === color.id
+                          ? '0 0 15px rgba(243, 244, 242, 0.4), 0 0 30px rgba(243, 244, 242, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                          : '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                      }}
+                      onMouseEnter={(e) => {
+                        if (selectedColor !== color.id) {
+                          e.currentTarget.style.border = '2px solid rgba(243, 244, 242, 0.4)'
+                          e.currentTarget.style.boxShadow = '0 0 10px rgba(243, 244, 242, 0.3), 0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (selectedColor !== color.id) {
+                          e.currentTarget.style.border = '2px solid rgba(243, 244, 242, 0.2)'
+                          e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                        }
+                      }}
                     >
                       <div 
                         className="w-full h-20 rounded-lg mb-3 transition-transform group-hover:scale-105"
@@ -314,7 +347,16 @@ function App() {
               </div>
 
               {/* Quick Specs */}
-              <div className="bg-graphite-deep/50 border border-titanium-gray/20 rounded-xl p-6">
+              <div 
+                className="rounded-2xl p-6 transition-all duration-300"
+                style={{
+                  background: 'rgba(12, 15, 18, 0.3)',
+                  backdropFilter: 'blur(30px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 0.15)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                }}
+              >
                 <h3 className="font-display text-display-sm text-warm-white mb-4">Especificações Rápidas</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {specifications.map((spec, index) => (
@@ -327,11 +369,39 @@ function App() {
               </div>
 
               {/* Price */}
-              <div className="bg-graphite-deep/50 border border-titanium-gray/30 rounded-xl p-6 text-center">
+              <div 
+                className="rounded-2xl p-6 text-center transition-all duration-300"
+                style={{
+                  background: 'rgba(12, 15, 18, 0.4)',
+                  backdropFilter: 'blur(30px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                  border: '2px solid rgba(243, 244, 242, 0.3)',
+                  boxShadow: '0 0 20px rgba(243, 244, 242, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                }}
+              >
                 <p className="font-body text-sm text-titanium-gray mb-2">A partir de</p>
-                <p className="font-display text-3xl md:text-4xl text-warm-white">R$ 34.490,00</p>
-                <button className="mt-4 w-full bg-carbon-black/80 backdrop-blur-md border border-titanium-gray/30 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-titanium-gray/60 hover:bg-carbon-black transition-all duration-300">
-                  Agende um test-ride
+                <p className="font-display text-3xl md:text-4xl text-warm-white mb-4">R$ 34.490,00</p>
+                <button 
+                  className="mt-4 w-full text-warm-white font-body font-semibold px-6 py-3 rounded-xl transition-all duration-300 overflow-hidden button-premium-shine button-ripple"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.5)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.3)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.5)'
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(243, 244, 242, 0.3), 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.01)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)'
+                  }}
+                >
+                  <span className="relative z-10">Agende um test-ride</span>
                 </button>
               </div>
             </div>
@@ -477,7 +547,7 @@ function App() {
               backdropFilter: 'blur(60px) saturate(180%)',
               WebkitBackdropFilter: 'blur(60px) saturate(180%)',
               border: '2px solid rgba(243, 244, 242, 0.8)',
-              boxShadow: '0 0 30px rgba(243, 244, 242, 0.5), 0 0 60px rgba(243, 244, 242, 0.3), 0 20px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+              boxShadow: '0 0 40px rgba(135, 206, 250, 0.4), 0 0 80px rgba(135, 206, 250, 0.25), 0 0 120px rgba(135, 206, 250, 0.15), 0 20px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
             }}
           >
             {/* Close Button - Liquid Glass */}
@@ -769,11 +839,36 @@ function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveSpecTab(tab.id)}
-                className={`px-6 py-3 rounded-lg font-body font-medium transition-all duration-300 ${
-                  activeSpecTab === tab.id
-                    ? 'bg-warm-white text-carbon-black shadow-button'
-                    : 'bg-graphite-deep border border-titanium-gray/20 text-titanium-gray hover:bg-titanium-gray/20 hover:text-warm-white hover:border-titanium-gray/40'
-                }`}
+                className="px-6 py-3 rounded-xl font-body font-medium transition-all duration-300"
+                style={activeSpecTab === tab.id ? {
+                  background: 'rgba(243, 244, 242, 0.95)',
+                  color: '#0C0F12',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 1)',
+                  boxShadow: '0 0 15px rgba(243, 244, 242, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5)'
+                } : {
+                  background: 'rgba(12, 15, 18, 0.3)',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 0.15)',
+                  color: '#98A0AD',
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  if (activeSpecTab !== tab.id) {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.color = '#F3F4F2'
+                    e.currentTarget.style.boxShadow = '0 0 10px rgba(243, 244, 242, 0.2), 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (activeSpecTab !== tab.id) {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.15)'
+                    e.currentTarget.style.color = '#98A0AD'
+                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                  }
+                }}
               >
                 {tab.label}
               </button>
@@ -782,7 +877,16 @@ function App() {
 
           {/* Motor & Transmissão */}
           {activeSpecTab === 'motor' && (
-            <div className="bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
+            <div 
+              className="rounded-3xl p-6 md:p-10 transition-all duration-300"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.15)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+              }}
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 {Object.entries(specsData.motor).map(([key, value]) => (
                   <div key={key} className="border-b border-titanium-gray/20 pb-4 last:border-0">
@@ -800,7 +904,16 @@ function App() {
 
           {/* Chassi & Suspensão */}
           {activeSpecTab === 'chassi' && (
-            <div className="bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
+            <div 
+              className="rounded-3xl p-6 md:p-10 transition-all duration-300"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.15)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+              }}
+            >
               <div className="space-y-6">
                 <div>
                   <h3 className="font-display text-display-sm text-warm-white mb-4">Chassi</h3>
@@ -863,7 +976,16 @@ function App() {
 
           {/* Dimensões & Ergonomia */}
           {activeSpecTab === 'dimensoes' && (
-            <div className="bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
+            <div 
+              className="rounded-3xl p-6 md:p-10 transition-all duration-300"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.15)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+              }}
+            >
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(specsData.dimensoes).map(([key, value]) => (
                   <div key={key} className="border-b border-titanium-gray/20 pb-4 last:border-0">
@@ -881,7 +1003,16 @@ function App() {
 
           {/* Equipamentos */}
           {activeSpecTab === 'equipamentos' && (
-            <div className="bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
+            <div 
+              className="rounded-3xl p-6 md:p-10 transition-all duration-300"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.15)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+              }}
+            >
               <div className="space-y-8">
                 <div>
                   <h3 className="font-display text-display-sm text-warm-white mb-4">Iluminação</h3>
@@ -914,7 +1045,16 @@ function App() {
           )}
 
           {/* Características Diferenciais */}
-          <div className="mt-8 bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
+          <div 
+            className="mt-8 rounded-3xl p-6 md:p-10 transition-all duration-300"
+            style={{
+              background: 'rgba(12, 15, 18, 0.3)',
+              backdropFilter: 'blur(30px) saturate(180%)',
+              WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+              border: '1px solid rgba(243, 244, 242, 0.15)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+            }}
+          >
             <h3 className="font-display text-display-sm text-warm-white mb-6">Características & Diferenciais</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {specsData.caracteristicas.map((caracteristica, index) => (
@@ -938,8 +1078,22 @@ function App() {
             {galleryImages.map((image) => (
               <div
                 key={image.id}
-                className="relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300"
                 onClick={() => setSelectedImage(image)}
+                style={{
+                  border: '1px solid rgba(243, 244, 242, 0.1)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                  e.currentTarget.style.boxShadow = '0 0 15px rgba(243, 244, 242, 0.2), 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.1)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)'
+                }}
               >
                 <img
                   src={image.src}
@@ -950,7 +1104,7 @@ function App() {
                   width="400"
                   height="300"
                 />
-                <div className="absolute inset-0 bg-carbon-black/0 group-hover:bg-carbon-black/30 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-carbon-black/0 group-hover:bg-carbon-black/20 transition-colors duration-300"></div>
               </div>
             ))}
           </div>
@@ -960,17 +1114,36 @@ function App() {
       {/* Lightbox */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-carbon-black/95 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{
+            background: 'rgba(12, 15, 18, 0.95)',
+            backdropFilter: 'blur(20px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(20px) saturate(180%)'
+          }}
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-5xl max-h-[90vh]">
+          <div 
+            className="relative max-w-5xl max-h-[90vh] rounded-3xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              border: '2px solid rgba(243, 244, 242, 0.6)',
+              boxShadow: '0 0 30px rgba(243, 244, 242, 0.4), 0 0 60px rgba(243, 244, 242, 0.2), 0 20px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+            }}
+          >
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              className="max-w-full max-h-[90vh] object-contain"
             />
             <button
-              className="absolute top-4 right-4 text-warm-white bg-graphite-deep/80 hover:bg-graphite-deep rounded-full p-2 transition-colors border border-titanium-gray/20"
+              className="absolute top-4 right-4 text-warm-white rounded-full p-3 transition-all duration-300 hover:scale-110"
+              style={{
+                background: 'rgba(12, 15, 18, 0.5)',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.3)',
+                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+              }}
               onClick={() => setSelectedImage(null)}
               aria-label="Fechar imagem"
             >
@@ -1047,21 +1220,55 @@ function App() {
                   href="https://www.google.com/maps/search/?api=1&query=Triumph+São+José+do+Rio+Preto"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 bg-carbon-black/80 backdrop-blur-sm border border-titanium-gray/30 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-titanium-gray/60 hover:bg-carbon-black transition-all duration-300"
+                  className="group inline-flex items-center justify-center gap-2 text-warm-white font-body font-semibold px-6 py-3 rounded-xl transition-all duration-300 overflow-hidden button-premium-shine button-ripple"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.5)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.3)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.5)'
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(243, 244, 242, 0.3), 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.01)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)'
+                  }}
                 >
-                  <svg className="w-5 h-5 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-warm-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
-                  <span>Abrir no Google Maps</span>
+                  <span className="relative z-10">Abrir no Google Maps</span>
                 </a>
                 <a 
                   href="tel:+551733541300"
-                  className="group inline-flex items-center justify-center gap-2 border border-titanium-gray/20 bg-graphite-deep/50 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-titanium-gray/40 hover:bg-graphite-deep transition-all duration-300"
+                  className="group inline-flex items-center justify-center gap-2 text-warm-white font-body font-semibold px-6 py-3 rounded-xl transition-all duration-300 overflow-hidden button-premium-shine button-ripple"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.3)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.2)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.4)'
+                    e.currentTarget.style.boxShadow = '0 0 15px rgba(243, 244, 242, 0.2), 0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.25)'
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.01)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)'
+                  }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Ligar Agora</span>
+                  <span className="relative z-10">Ligar Agora</span>
                 </a>
               </div>
             </div>
