@@ -1337,14 +1337,27 @@ function App() {
             <p className="font-body text-sm text-titanium-gray">
               © 2024 Scrambler 400X — Landing Page Conceitual
             </p>
-            <a 
-              href="https://github.com" 
-              className="font-body text-sm text-titanium-gray hover:text-warm-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver repositório
-            </a>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <p className="font-body text-sm text-titanium-gray">
+                Desenvolvido por{' '}
+                <a 
+                  href="https://alphamarketing.digital" 
+                  className="text-warm-white hover:text-titanium-gray transition-colors font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ALPHA - Marketing & Softwares
+                </a>
+              </p>
+              <a 
+                href="https://github.com" 
+                className="font-body text-sm text-titanium-gray hover:text-warm-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositório
+              </a>
+            </div>
           </div>
         </div>
       </footer>
