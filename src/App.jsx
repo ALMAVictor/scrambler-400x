@@ -426,7 +426,7 @@ function App() {
                   
                   {/* Video Info - Ultra Transparente */}
                   <div 
-                    className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transition-all duration-300"
+                    className="absolute bottom-0 left-0 right-0 p-3 md:p-4 transition-all duration-300"
                     style={{
                       background: 'rgba(12, 15, 18, 0.05)',
                       backdropFilter: 'blur(1px) saturate(180%)',
@@ -434,14 +434,16 @@ function App() {
                       borderTop: '1px solid rgba(243, 244, 242, 0.08)',
                     }}
                   >
-                    <h3 className="font-display text-lg md:text-xl text-warm-white mb-1 md:mb-2 font-bold" style={{ 
-                      textShadow: '0 2px 16px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.8)',
-                      letterSpacing: '0.5px'
+                    <h3 className="font-display text-base md:text-lg text-warm-white mb-1 font-bold" style={{ 
+                      textShadow: '0 3px 20px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 0.8), 0 6px 12px rgba(0, 0, 0, 1), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8)',
+                      letterSpacing: '0.5px',
+                      color: '#FFFFFF'
                     }}>
                       {video.title}
                     </h3>
-                    <p className="font-body text-sm md:text-base text-warm-white font-semibold" style={{ 
-                      textShadow: '0 2px 12px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.8)'
+                    <p className="font-body text-xs md:text-sm text-warm-white font-bold" style={{ 
+                      textShadow: '0 3px 16px rgba(0, 0, 0, 1), 0 0 30px rgba(0, 0, 0, 0.8), 0 4px 8px rgba(0, 0, 0, 1), -1px -1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8)',
+                      color: '#FFFFFF'
                     }}>
                       {video.description}
                     </p>
@@ -474,8 +476,8 @@ function App() {
               background: 'rgba(12, 15, 18, 0.4)',
               backdropFilter: 'blur(60px) saturate(180%)',
               WebkitBackdropFilter: 'blur(60px) saturate(180%)',
-              border: '1px solid rgba(243, 244, 242, 0.1)',
-              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+              border: '2px solid rgba(243, 244, 242, 0.8)',
+              boxShadow: '0 0 30px rgba(243, 244, 242, 0.5), 0 0 60px rgba(243, 244, 242, 0.3), 0 20px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
             }}
           >
             {/* Close Button - Liquid Glass */}
