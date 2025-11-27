@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-body;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0C0F12; /* carbon-black */
+    color: #F3F4F2; /* warm-white */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 0.6s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* Efeito de brilho premium no texto - Dark Luxe */
+  .text-glow {
+    text-shadow: 0 0 30px rgba(47, 74, 58, 0.5), 0 0 60px rgba(47, 74, 58, 0.3);
+  }
+  
+  /* Backdrop blur premium */
+  .backdrop-blur-premium {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+  
+  /* Parallax effect */
+  .parallax {
+    will-change: transform;
+  }
+  
+  /* Smooth hover transitions */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Shimmer effect para botões premium */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(198, 168, 109, 0.2),
+      transparent
+    );
+    animation: shimmer 3s infinite;
+  }
+  
+  /* Glow effect sutil */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(198, 168, 109, 0.3),
+                0 0 40px rgba(198, 168, 109, 0.1);
+  }
+  
+  .glow-gold:hover {
+    box-shadow: 0 0 30px rgba(198, 168, 109, 0.5),
+                0 0 60px rgba(198, 168, 109, 0.2);
+  }
+  
+  /* Glow mais suave para ícones */
+  .glow-icon {
+    box-shadow: 0 0 10px rgba(198, 168, 109, 0.15),
+                0 0 20px rgba(198, 168, 109, 0.05);
+  }
+  
+  .glow-icon:hover {
+    box-shadow: 0 0 15px rgba(198, 168, 109, 0.25),
+                0 0 30px rgba(198, 168, 109, 0.1);
+  }
+  
+  /* Border gradient effect */
+  .border-gradient {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(#0C0F12, #0C0F12) padding-box,
+                linear-gradient(135deg, rgba(198, 168, 109, 0.3), rgba(47, 74, 58, 0.3)) border-box;
+  }
+  
+  /* Pulse effect sutil */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(198, 168, 109, 0.3);
+    }
+    50% {
+      opacity: 0.8;
+      box-shadow: 0 0 30px rgba(198, 168, 109, 0.5);
+    }
+  }
+  
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(135deg, #C6A86D 0%, #F3F4F2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Subtle shine on hover */
+  .shine-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+  
+  .shine-hover:hover::after {
+    left: 100%;
+  }
+}

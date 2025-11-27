@@ -1,0 +1,59 @@
+{
+  "motor": {
+    "tipo": "Monocilíndrico, 4 válvulas, DOHC, refrigeração líquida",
+    "cilindrada": "398,15 cm³",
+    "diametroCurso": "89,0 mm × 64,0 mm",
+    "taxaCompressao": "12 : 1",
+    "potenciaMaxima": "40 PS / 39,5 bhp (≈ 29,4 kW) @ 8.000 rpm",
+    "torqueMaximo": "37,5 Nm @ 6.500 rpm",
+    "alimentacao": "Injeção eletrônica Bosch com acelerador eletrônico (ride-by-wire)",
+    "escape": "Sistema com coletor de dupla camada + silenciador em aço inox",
+    "transmissao": "6 marchas, embreagem assistida/deslizante (slip-assist)",
+    "transmissaoFinal": "Corrente (corrente X-ring)"
+  },
+  "chassi": {
+    "quadro": "Estrutura tubular/spine-perimeter híbrido + subquadro traseiro rebitado",
+    "bracoOscilante": "Alumínio fundido, duplo lateral",
+    "suspensaoDianteira": "Garfo invertido (USD / Big Piston Fork, 43 mm) — curso da roda: 150 mm",
+    "suspensaoTraseira": "Monoamortecedor a gás (RSU) com reservatório externo e ajuste de pré-carga — curso 150 mm",
+    "rodas": {
+      "dianteira": "Liga leve 19\" (100/90-19)",
+      "traseira": "Liga leve 17\" (140/80-17)"
+    },
+    "freios": {
+      "dianteiro": "Disco 320 mm + pinça radial 4 pistões + ABS (comutável)",
+      "traseiro": "Disco 230 mm + pinça flutuante + ABS"
+    }
+  },
+  "dimensoes": {
+    "alturaAssento": "835 mm",
+    "distanciaEntreEixos": "1.418 mm",
+    "rake": "23,2°",
+    "trail": "108 mm",
+    "larguraGuidao": "901 mm",
+    "alturaSemEspelhos": "1.169 mm",
+    "capacidadeTanque": "13 litros",
+    "pesoOrdemMarcha": "179 kg (alguns mercados: 185 kg)"
+  },
+  "equipamentos": {
+    "iluminacao": "Full-LED — farol dianteiro, luz traseira, luzes de posição/DRL",
+    "painel": "Híbrido: velocímetro analógico + display LCD multifuncional",
+    "seguranca": [
+      "ABS em ambas rodas (dianteira + traseira)",
+      "Controle de tração comutável",
+      "Acelerador eletrônico (ride-by-wire)",
+      "Ignição com imobilizador/anti-furto (key-chip)",
+      "Trava de direção"
+    ],
+    "ergonomia": "Posição de pilotagem scrambler: guidão largo, banco relativamente alto e estreito, ergonomia confortável para uso misto (urbe + estrada / terra leve)"
+  },
+  "caracteristicas": [
+    "Motor TR-Series com refrigeração líquida",
+    "Suspensão com curso longo (150 mm) para versatilidade",
+    "Pneus mistos para uso urbano e leve off-road",
+    "Proteções pensadas para uso all-road",
+    "Chassis leve e ágil (menos de 180 kg)",
+    "Equipamentos de série premium"
+  ]
+}
+
