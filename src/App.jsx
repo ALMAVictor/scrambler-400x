@@ -57,7 +57,7 @@ function App() {
     {
       id: 'video2',
       youtubeId: 'MfDYXfKRiyA',
-      startTime: 0,
+      startTime: 8,
       title: 'Impressões e Viagem',
       description: 'Teste real em estrada'
     }
@@ -121,7 +121,7 @@ function App() {
             muted
             playsInline
             className="w-full h-full object-cover scale-110"
-            poster="https://images.unsplash.com/photo-1558980664-1db506751c6c?w=1920&q=80"
+            poster="/landing-scrambler/public/scrambler-wallpaper-7.jpeg"
             aria-label="Vídeo de fundo da Scrambler 400X"
           >
             {/* Tente carregar vídeo local primeiro, depois fallback para vídeo online */}
@@ -129,7 +129,7 @@ function App() {
             <source src="https://videos.pexels.com/video-files/3045163/3045163-uhd_2560_1440_25fps.mp4" type="video/mp4" />
             {/* Fallback para navegadores que não suportam vídeo */}
             <img 
-              src="https://images.unsplash.com/photo-1558980664-1db506751c6c?w=1920&q=80" 
+              src="/landing-scrambler/public/scrambler-wallpaper-7.jpeg" 
               alt="Triumph Scrambler 400X"
               className="w-full h-full object-cover"
             />
@@ -298,7 +298,7 @@ function App() {
                     <button
                       key={color.id}
                       onClick={() => setSelectedColor(color.id)}
-                      className="group relative p-4 rounded-2xl border-2 transition-all duration-300 overflow-hidden"
+                      className="group relative p-4 rounded-2xl border-2 transition-all duration-500 overflow-hidden"
                       style={{
                         background: selectedColor === color.id 
                           ? 'rgba(12, 15, 18, 0.5)' 
@@ -309,7 +309,11 @@ function App() {
                           ? '2px solid rgba(243, 244, 242, 0.6)'
                           : '2px solid rgba(243, 244, 242, 0.2)',
                         boxShadow: selectedColor === color.id
-                          ? '0 0 15px rgba(243, 244, 242, 0.4), 0 0 30px rgba(243, 244, 242, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                          ? color.id === 'khaki-green'
+                            ? '0 0 25px rgba(85, 107, 47, 0.6), 0 0 50px rgba(85, 107, 47, 0.4), 0 0 75px rgba(85, 107, 47, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                            : color.id === 'baja-orange'
+                            ? '0 0 25px rgba(217, 119, 6, 0.6), 0 0 50px rgba(217, 119, 6, 0.4), 0 0 75px rgba(217, 119, 6, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                            : '0 0 25px rgba(12, 15, 18, 0.7), 0 0 50px rgba(12, 15, 18, 0.5), 0 0 75px rgba(12, 15, 18, 0.3), 0 8px 32px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
                           : '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
                       }}
                       onMouseEnter={(e) => {
