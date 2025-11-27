@@ -1278,7 +1278,7 @@ function App() {
             </div>
 
             {/* Mapa */}
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-titanium-gray/20 shadow-lg">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-titanium-gray/20 shadow-lg group">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.4351508311493!2d-49.415341344982956!3d-20.854503788984484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdb39357fc5ffd%3A0x1b2d87174d441f29!2sTriumph%20Euro%20Motors!5e0!3m2!1spt-BR!2sbr!4v1764262741455!5m2!1spt-BR!2sbr"
                 width="100%"
@@ -1290,6 +1290,41 @@ function App() {
                 className="absolute inset-0"
                 title="Localização da Concessionária Triumph Euro Motors em São José do Rio Preto"
               />
+              {/* Overlay clicável para abrir no Google Maps */}
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Av.+Pres.+Juscelino+K.+de+Oliveira,+3600+-+Loja+B+-+Jardim+Moyses+Miguel+Haddad,+São+José+do+Rio+Preto+-+SP,+15093-225"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10 cursor-pointer flex items-center justify-center transition-all duration-300"
+                style={{
+                  background: 'rgba(12, 15, 18, 0)',
+                  backdropFilter: 'blur(0px)',
+                  WebkitBackdropFilter: 'blur(0px)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(12, 15, 18, 0.05)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(12, 15, 18, 0)'
+                }}
+                aria-label="Abrir localização no Google Maps"
+              >
+                {/* Indicador visual sutil */}
+                <div 
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full p-4"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.6)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.3)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  }}
+                >
+                  <svg className="w-8 h-8 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
