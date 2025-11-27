@@ -547,7 +547,7 @@ function App() {
               backdropFilter: 'blur(60px) saturate(180%)',
               WebkitBackdropFilter: 'blur(60px) saturate(180%)',
               border: '2px solid rgba(243, 244, 242, 0.8)',
-              boxShadow: '0 0 40px rgba(135, 206, 250, 0.4), 0 0 80px rgba(135, 206, 250, 0.25), 0 0 120px rgba(135, 206, 250, 0.15), 0 20px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+              boxShadow: '0 0 40px rgba(85, 107, 47, 0.4), 0 0 80px rgba(85, 107, 47, 0.25), 0 0 120px rgba(85, 107, 47, 0.15), 0 20px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
             }}
           >
             {/* Close Button - Liquid Glass */}
