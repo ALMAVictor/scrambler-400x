@@ -134,10 +134,8 @@ function App() {
               className="w-full h-full object-cover"
             />
           </video>
-          {/* Overlay escuro com gradiente premium Dark Luxe */}
-          <div className="absolute inset-0 bg-gradient-to-br from-carbon-black/95 via-carbon-black/90 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-carbon-black via-transparent to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-khaki-green/5"></div>
+          {/* Overlay sutil para legibilidade do texto */}
+          <div className="absolute inset-0 bg-gradient-to-t from-carbon-black/80 via-carbon-black/40 to-transparent"></div>
         </div>
 
         {/* Content Overlay */}
@@ -155,28 +153,43 @@ function App() {
               </div>
 
               <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-warm-white leading-[1.1] tracking-tight drop-shadow-2xl relative">
-                Scrambler <span className="text-khaki-green text-glow relative inline-block">400X</span>
+                Scrambler <span className="text-warm-white relative inline-block">400X</span>
               </h1>
               
               <div className="space-y-4">
-                <p className="font-display text-2xl md:text-3xl lg:text-4xl text-gold-smoke tracking-wide">
+                <p className="font-display text-2xl md:text-3xl lg:text-4xl text-warm-white tracking-wide">
                   Liberdade em duas rodas
                 </p>
                 <p className="font-body text-lg md:text-xl lg:text-2xl text-titanium-gray leading-relaxed max-w-2xl mx-auto">
                   Design clássico. Performance moderna. Para quem vive a estrada com propósito.
                 </p>
                 <p className="font-body text-base md:text-lg text-titanium-gray/80 leading-relaxed max-w-2xl mx-auto">
-                  Disponível em São José do Rio Preto na <span className="text-gold-smoke font-semibold">Triumph Euro Motors</span>
+                  Disponível em São José do Rio Preto na <span className="text-warm-white font-semibold">Triumph Euro Motors</span>
                 </p>
               </div>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons - Premium Liquid Glass */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                 <button 
-                  className="group relative bg-carbon-black/40 backdrop-blur-md border border-gold-smoke/30 text-warm-white font-body font-semibold px-10 py-5 rounded-lg shadow-lg hover:shadow-xl hover:border-gold-smoke/60 hover:bg-carbon-black/50 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-gold-smoke/40 text-base md:text-lg glow-gold shine-hover overflow-hidden"
+                  className="group relative text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/40 text-base md:text-lg overflow-hidden"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.35)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.2)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.25)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+                  }}
                   aria-label="Agende um test-ride"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
+                  <span className="flex items-center gap-2 relative z-10">
                     Agende um test-ride
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -184,18 +197,48 @@ function App() {
                   </span>
                 </button>
                 <button 
-                  className="group border border-titanium-gray/20 bg-carbon-black/30 backdrop-blur-md text-warm-white font-body font-semibold px-10 py-5 rounded-lg hover:bg-carbon-black/40 hover:border-titanium-gray/40 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg"
+                  className="group relative border text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg overflow-hidden"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.25)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.15)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.25)'
+                    e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.15)'
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                  }}
                   aria-label="Ver galeria"
                   onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Ver galeria
+                  <span className="relative z-10">Ver galeria</span>
                 </button>
                 <button 
-                  className="group border border-titanium-gray/20 bg-carbon-black/30 backdrop-blur-md text-warm-white font-body font-semibold px-10 py-5 rounded-lg hover:bg-carbon-black/40 hover:border-titanium-gray/40 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg"
+                  className="group relative border text-warm-white font-body font-semibold px-10 py-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-titanium-gray/30 text-base md:text-lg overflow-hidden"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.25)',
+                    backdropFilter: 'blur(20px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                    border: '1px solid rgba(243, 244, 242, 0.15)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.25)'
+                    e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.15)'
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                  }}
                   aria-label="Ver ficha técnica"
                   onClick={() => document.getElementById('specs')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Ficha Técnica
+                  <span className="relative z-10">Ficha Técnica</span>
                 </button>
               </div>
 
@@ -243,10 +286,10 @@ function App() {
                     <button
                       key={color.id}
                       onClick={() => setSelectedColor(color.id)}
-                      className={`group relative p-4 rounded-xl border-2 transition-all duration-300 overflow-hidden ${
+                      className={`group relative p-4 rounded-xl border-2 transition-all duration-300 ${
                         selectedColor === color.id
-                          ? 'border-gold-smoke bg-carbon-black/60 glow-gold'
-                          : 'border-titanium-gray/20 bg-graphite-deep/50 hover:border-titanium-gray/40 hover:border-gold-smoke/30'
+                          ? 'border-warm-white/40 bg-carbon-black/60'
+                          : 'border-titanium-gray/20 bg-graphite-deep/50 hover:border-titanium-gray/40'
                       }`}
                     >
                       <div 
@@ -254,13 +297,13 @@ function App() {
                         style={{ backgroundColor: color.color }}
                       />
                       <p className={`text-xs font-body text-center transition-colors ${
-                        selectedColor === color.id ? 'text-gold-smoke' : 'text-titanium-gray'
+                        selectedColor === color.id ? 'text-warm-white' : 'text-titanium-gray'
                       }`}>
                         {color.name}
                       </p>
                       {selectedColor === color.id && (
                         <div className="absolute top-2 right-2">
-                          <svg className="w-5 h-5 text-gold-smoke" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-5 h-5 text-warm-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
                         </div>
@@ -271,31 +314,25 @@ function App() {
               </div>
 
               {/* Quick Specs */}
-              <div className="relative bg-graphite-deep/50 border border-titanium-gray/20 rounded-xl p-6 overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-smoke/5 via-transparent to-khaki-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Especificações Rápidas</h3>
+              <div className="bg-graphite-deep/50 border border-titanium-gray/20 rounded-xl p-6">
+                <h3 className="font-display text-display-sm text-warm-white mb-4">Especificações Rápidas</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {specifications.map((spec, index) => (
-                    <div key={index} className="border-b border-titanium-gray/10 pb-3 last:border-0 group/item">
-                      <div className="font-body text-xs text-titanium-gray mb-1 group-hover/item:text-titanium-gray transition-colors">{spec.label}</div>
-                      <div className="font-display text-lg text-warm-white group-hover/item:text-gold-smoke transition-colors">{spec.value}</div>
+                    <div key={index} className="border-b border-titanium-gray/10 pb-3 last:border-0">
+                      <div className="font-body text-xs text-titanium-gray mb-1">{spec.label}</div>
+                      <div className="font-display text-lg text-warm-white">{spec.value}</div>
                     </div>
                   ))}
-                </div>
                 </div>
               </div>
 
               {/* Price */}
-              <div className="relative bg-graphite-deep/50 border border-gold-smoke/30 rounded-xl p-6 text-center overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-smoke/10 via-transparent to-khaki-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <p className="font-body text-sm text-titanium-gray mb-2">A partir de</p>
-                  <p className="font-display text-3xl md:text-4xl text-gold-smoke drop-shadow-lg">R$ 34.490,00</p>
-                  <button className="mt-4 w-full bg-carbon-black/80 backdrop-blur-md border border-gold-smoke/30 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-gold-smoke/60 hover:bg-carbon-black transition-all duration-300 glow-gold shine-hover overflow-hidden">
-                    <span className="relative z-10">Agende um test-ride</span>
-                  </button>
-                </div>
+              <div className="bg-graphite-deep/50 border border-titanium-gray/30 rounded-xl p-6 text-center">
+                <p className="font-body text-sm text-titanium-gray mb-2">A partir de</p>
+                <p className="font-display text-3xl md:text-4xl text-warm-white">R$ 34.490,00</p>
+                <button className="mt-4 w-full bg-carbon-black/80 backdrop-blur-md border border-titanium-gray/30 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-titanium-gray/60 hover:bg-carbon-black transition-all duration-300">
+                  Agende um test-ride
+                </button>
               </div>
             </div>
           </div>
@@ -329,7 +366,24 @@ function App() {
                     setSelectedVideo(video)
                     setIsVideoModalOpen(true)
                   }}
-                  className="relative w-full aspect-video rounded-2xl overflow-hidden border border-titanium-gray/20 hover:border-gold-smoke/40 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="relative w-full aspect-video rounded-3xl overflow-hidden transition-all duration-500"
+                  style={{
+                    background: 'rgba(12, 15, 18, 0.12)',
+                    backdropFilter: 'blur(50px) saturate(200%)',
+                    WebkitBackdropFilter: 'blur(50px) saturate(200%)',
+                    border: '2px solid rgba(243, 244, 242, 0.8)',
+                    boxShadow: '0 0 20px rgba(243, 244, 242, 0.4), 0 0 40px rgba(243, 244, 242, 0.2), 0 12px 48px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.border = '2px solid rgba(243, 244, 242, 1)'
+                    e.currentTarget.style.boxShadow = '0 0 30px rgba(243, 244, 242, 0.6), 0 0 60px rgba(243, 244, 242, 0.3), 0 16px 64px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(243, 244, 242, 0.4)'
+                    e.currentTarget.style.transform = 'translateY(-4px)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.border = '2px solid rgba(243, 244, 242, 0.8)'
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(243, 244, 242, 0.4), 0 0 40px rgba(243, 244, 242, 0.2), 0 12px 48px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(243, 244, 242, 0.3)'
+                    e.currentTarget.style.transform = 'translateY(0)'
+                  }}
                 >
                   {/* Thumbnail do YouTube */}
                   <img 
@@ -338,22 +392,59 @@ function App() {
                     className="w-full h-full object-cover"
                   />
                   
-                  {/* Overlay escuro */}
-                  <div className="absolute inset-0 bg-carbon-black/40 group-hover:bg-carbon-black/20 transition-colors duration-300"></div>
+                  {/* Overlay escuro sutil */}
+                  <div className="absolute inset-0 bg-carbon-black/5 group-hover:bg-carbon-black/0 transition-colors duration-300"></div>
                   
-                  {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gold-smoke/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
-                      <svg className="w-8 h-8 md:w-10 md:h-10 text-carbon-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  {/* Play Button - Liquid Glass Ultra Transparente */}
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div 
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 relative"
+                      style={{
+                        background: 'rgba(243, 244, 242, 0.08)',
+                        backdropFilter: 'blur(2px) saturate(200%)',
+                        WebkitBackdropFilter: 'blur(2px) saturate(200%)',
+                        border: '1px solid rgba(243, 244, 242, 0.15)',
+                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.2)',
+                        zIndex: 20
+                      }}
+                    >
+                      {/* Camada acima do botão */}
+                      <div 
+                        className="absolute inset-0 rounded-full"
+                        style={{
+                          background: 'rgba(243, 244, 242, 0.05)',
+                          backdropFilter: 'blur(1px) saturate(180%)',
+                          WebkitBackdropFilter: 'blur(1px) saturate(180%)',
+                          zIndex: 1
+                        }}
+                      ></div>
+                      <svg className="w-8 h-8 md:w-10 md:h-10 text-warm-white ml-1 relative z-10" fill="currentColor" viewBox="0 0 24 24" style={{ filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5))' }}>
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
                   </div>
                   
-                  {/* Video Info */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-carbon-black/90 to-transparent p-4">
-                    <h3 className="font-display text-lg text-warm-white mb-1">{video.title}</h3>
-                    <p className="font-body text-sm text-titanium-gray">{video.description}</p>
+                  {/* Video Info - Ultra Transparente */}
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transition-all duration-300"
+                    style={{
+                      background: 'rgba(12, 15, 18, 0.05)',
+                      backdropFilter: 'blur(1px) saturate(180%)',
+                      WebkitBackdropFilter: 'blur(1px) saturate(180%)',
+                      borderTop: '1px solid rgba(243, 244, 242, 0.08)',
+                    }}
+                  >
+                    <h3 className="font-display text-lg md:text-xl text-warm-white mb-1 md:mb-2 font-bold" style={{ 
+                      textShadow: '0 2px 16px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.8)',
+                      letterSpacing: '0.5px'
+                    }}>
+                      {video.title}
+                    </h3>
+                    <p className="font-body text-sm md:text-base text-warm-white font-semibold" style={{ 
+                      textShadow: '0 2px 12px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.8)'
+                    }}>
+                      {video.description}
+                    </p>
                   </div>
                 </button>
               </div>
@@ -365,39 +456,67 @@ function App() {
       {/* Video Modal */}
       {isVideoModalOpen && selectedVideo && (
         <div 
-          className="fixed inset-0 bg-carbon-black/98 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+          style={{
+            background: 'rgba(12, 15, 18, 0.85)',
+            backdropFilter: 'blur(20px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(20px) saturate(180%)'
+          }}
           onClick={() => {
             setIsVideoModalOpen(false)
             setSelectedVideo(null)
           }}
         >
           <div 
-            className="relative w-full max-w-5xl bg-carbon-black rounded-2xl overflow-hidden shadow-2xl"
+            className="relative w-full max-w-5xl rounded-3xl overflow-hidden transition-all duration-300"
             onClick={(e) => e.stopPropagation()}
+            style={{
+              background: 'rgba(12, 15, 18, 0.4)',
+              backdropFilter: 'blur(60px) saturate(180%)',
+              WebkitBackdropFilter: 'blur(60px) saturate(180%)',
+              border: '1px solid rgba(243, 244, 242, 0.1)',
+              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(243, 244, 242, 0.15)'
+            }}
           >
-            {/* Close Button */}
+            {/* Close Button - Liquid Glass */}
             <button
-              className="absolute top-4 right-4 z-20 text-warm-white bg-carbon-black/90 hover:bg-carbon-black rounded-full p-3 transition-all duration-300 border border-gold-smoke/30 hover:border-gold-smoke/60 hover:scale-110 shadow-lg"
+              className="absolute top-4 right-4 z-20 text-warm-white rounded-full p-3 transition-all duration-300 hover:scale-110"
               onClick={() => {
                 setIsVideoModalOpen(false)
                 setSelectedVideo(null)
               }}
               aria-label="Fechar vídeo"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.15)',
+                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+              }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
-            {/* Video Title */}
-            <div className="absolute top-4 left-4 z-10 bg-carbon-black/80 backdrop-blur-sm px-4 py-2 rounded-lg border border-titanium-gray/20">
-              <h3 className="font-display text-lg text-warm-white">{selectedVideo.title}</h3>
+            {/* Video Title - Liquid Glass */}
+            <div 
+              className="absolute top-4 left-4 z-10 px-4 py-2 rounded-xl"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.1)',
+                boxShadow: 'inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+              }}
+            >
+              <h3 className="font-display text-lg text-warm-white" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>{selectedVideo.title}</h3>
             </div>
 
             {/* YouTube Video */}
-            <div className="relative w-full bg-carbon-black" style={{ paddingBottom: '56.25%' }}>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%', background: 'rgba(12, 15, 18, 0.2)' }}>
               <iframe
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute top-0 left-0 w-full h-full rounded-3xl"
                 src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1&start=${selectedVideo.startTime}&rel=0&modestbranding=1`}
                 title={selectedVideo.title}
                 frameBorder="0"
@@ -418,63 +537,162 @@ function App() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Card 1 - Potência */}
-            <div className="group relative bg-graphite-deep/50 border border-titanium-gray/20 rounded-2xl p-6 md:p-8 hover:border-gold-smoke/40 hover:shadow-card-hover transition-all duration-300 animate-fade-up overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-smoke/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-smoke/20 to-gold-smoke/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 glow-icon">
-                  <svg className="w-8 h-8 text-gold-smoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div className="font-display text-4xl md:text-5xl text-gold-smoke mb-2 drop-shadow-lg">≈ 39 cv</div>
-                <h3 className="font-display text-lg text-warm-white mb-2">Potência</h3>
-                <p className="font-body text-sm text-titanium-gray">Motor single-cylinder de 398cc com resposta imediata</p>
+            <div 
+              className="group relative rounded-3xl p-6 md:p-8 transition-all duration-300 animate-fade-up overflow-hidden"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.1)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.transform = 'translateY(-4px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+                style={{
+                  background: 'rgba(243, 244, 242, 0.08)',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 0.15)',
+                  boxShadow: 'inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                }}
+              >
+                <svg className="w-8 h-8 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
+              <div className="font-display text-4xl md:text-5xl text-warm-white mb-2">≈ 39 cv</div>
+              <h3 className="font-display text-lg text-warm-white mb-2">Potência</h3>
+              <p className="font-body text-sm text-titanium-gray">Motor single-cylinder de 398cc com resposta imediata</p>
             </div>
 
             {/* Card 2 - ABS */}
-            <div className="group relative bg-graphite-deep/50 border border-titanium-gray/20 rounded-2xl p-6 md:p-8 hover:border-gold-smoke/40 hover:shadow-card-hover transition-all duration-300 animate-fade-up overflow-hidden" style={{ animationDelay: '0.1s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-smoke/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-smoke/20 to-gold-smoke/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 glow-icon">
-                  <svg className="w-8 h-8 text-gold-smoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <div className="font-display text-4xl md:text-5xl text-gold-smoke mb-2 drop-shadow-lg">ABS</div>
-                <h3 className="font-display text-lg text-warm-white mb-2">Segurança</h3>
-                <p className="font-body text-sm text-titanium-gray">Sistema de freios ABS para máxima segurança</p>
+            <div 
+              className="group relative rounded-3xl p-6 md:p-8 transition-all duration-300 animate-fade-up overflow-hidden"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.1)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)',
+                animationDelay: '0.1s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.transform = 'translateY(-4px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+                style={{
+                  background: 'rgba(243, 244, 242, 0.08)',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 0.15)',
+                  boxShadow: 'inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                }}
+              >
+                <svg className="w-8 h-8 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
+              <div className="font-display text-4xl md:text-5xl text-warm-white mb-2">ABS</div>
+              <h3 className="font-display text-lg text-warm-white mb-2">Segurança</h3>
+              <p className="font-body text-sm text-titanium-gray">Sistema de freios ABS para máxima segurança</p>
             </div>
 
             {/* Card 3 - 6 Marchas */}
-            <div className="group relative bg-graphite-deep/50 border border-titanium-gray/20 rounded-2xl p-6 md:p-8 hover:border-gold-smoke/40 hover:shadow-card-hover transition-all duration-300 animate-fade-up overflow-hidden" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-smoke/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-smoke/20 to-gold-smoke/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 glow-icon">
-                  <svg className="w-8 h-8 text-gold-smoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
-                </div>
-                <div className="font-display text-4xl md:text-5xl text-gold-smoke mb-2 drop-shadow-lg">6</div>
-                <h3 className="font-display text-lg text-warm-white mb-2">Marchas</h3>
-                <p className="font-body text-sm text-titanium-gray">Câmbio de 6 velocidades com troca suave</p>
+            <div 
+              className="group relative rounded-3xl p-6 md:p-8 transition-all duration-300 animate-fade-up overflow-hidden"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.1)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)',
+                animationDelay: '0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.transform = 'translateY(-4px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+                style={{
+                  background: 'rgba(243, 244, 242, 0.08)',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 0.15)',
+                  boxShadow: 'inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                }}
+              >
+                <svg className="w-8 h-8 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
               </div>
+              <div className="font-display text-4xl md:text-5xl text-warm-white mb-2">6</div>
+              <h3 className="font-display text-lg text-warm-white mb-2">Marchas</h3>
+              <p className="font-body text-sm text-titanium-gray">Câmbio de 6 velocidades com troca suave</p>
             </div>
 
             {/* Card 4 - Design */}
-            <div className="group relative bg-graphite-deep/50 border border-titanium-gray/20 rounded-2xl p-6 md:p-8 hover:border-gold-smoke/40 hover:shadow-card-hover transition-all duration-300 animate-fade-up overflow-hidden" style={{ animationDelay: '0.3s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-smoke/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-smoke/20 to-gold-smoke/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 glow-icon">
-                  <svg className="w-8 h-8 text-gold-smoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
-                </div>
-                <div className="font-display text-4xl md:text-5xl text-gold-smoke mb-2 drop-shadow-lg">100%</div>
-                <h3 className="font-display text-lg text-warm-white mb-2">Scrambler</h3>
-                <p className="font-body text-sm text-titanium-gray">DNA autêntico Triumph com design atemporal</p>
+            <div 
+              className="group relative rounded-3xl p-6 md:p-8 transition-all duration-300 animate-fade-up overflow-hidden"
+              style={{
+                background: 'rgba(12, 15, 18, 0.3)',
+                backdropFilter: 'blur(30px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(30px) saturate(180%)',
+                border: '1px solid rgba(243, 244, 242, 0.1)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)',
+                animationDelay: '0.3s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                e.currentTarget.style.transform = 'translateY(-4px)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.border = '1px solid rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 244, 242, 0.1)'
+                e.currentTarget.style.transform = 'translateY(0)'
+              }}
+            >
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+                style={{
+                  background: 'rgba(243, 244, 242, 0.08)',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                  border: '1px solid rgba(243, 244, 242, 0.15)',
+                  boxShadow: 'inset 0 1px 0 rgba(243, 244, 242, 0.2)'
+                }}
+              >
+                <svg className="w-8 h-8 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
               </div>
+              <div className="font-display text-4xl md:text-5xl text-warm-white mb-2">100%</div>
+              <h3 className="font-display text-lg text-warm-white mb-2">Scrambler</h3>
+              <p className="font-body text-sm text-titanium-gray">DNA autêntico Triumph com design atemporal</p>
             </div>
           </div>
         </div>
@@ -496,7 +714,7 @@ function App() {
                 <p className="font-body text-lg text-titanium-gray leading-relaxed">
                   Com seu design clássico reinterpretado e tecnologia moderna, ela combina o melhor dos dois mundos: a autenticidade de uma scrambler britânica e a confiabilidade que você precisa para qualquer aventura.
                 </p>
-                <p className="font-body text-lg text-gold-smoke font-medium italic">
+                <p className="font-body text-lg text-warm-white font-medium italic">
                   "Não se trata de chegar ao destino. Trata-se de cada curva, cada trilha, cada momento em que você se sente verdadeiramente livre."
                 </p>
               </div>
@@ -504,7 +722,7 @@ function App() {
 
             {/* Imagens Lifestyle */}
             <div className="grid grid-cols-2 gap-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-              <div className="relative aspect-square rounded-xl overflow-hidden border border-titanium-gray/20 group hover:border-gold-smoke/40 transition-all">
+              <div className="relative aspect-square rounded-xl overflow-hidden border border-titanium-gray/20 group hover:border-titanium-gray/40 transition-all">
                 <img 
                   src="/scrambler-praia-wallpaper.jpeg"
                   alt="Scrambler 400X lifestyle na praia"
@@ -513,7 +731,7 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-carbon-black/60 to-transparent"></div>
               </div>
-              <div className="relative aspect-square rounded-xl overflow-hidden border border-titanium-gray/20 group hover:border-gold-smoke/40 transition-all">
+              <div className="relative aspect-square rounded-xl overflow-hidden border border-titanium-gray/20 group hover:border-titanium-gray/40 transition-all">
                 <img 
                   src="/wallpaper-scrambler.jpeg"
                   alt="Scrambler 400X lifestyle"
@@ -522,7 +740,7 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-carbon-black/60 to-transparent"></div>
               </div>
-              <div className="relative aspect-video rounded-xl overflow-hidden border border-titanium-gray/20 group hover:border-gold-smoke/40 transition-all col-span-2">
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-titanium-gray/20 group hover:border-titanium-gray/40 transition-all col-span-2">
                 <img 
                   src="/scrambler-wallpaper-oficial.avif"
                   alt="Scrambler 400X em ação"
@@ -551,8 +769,8 @@ function App() {
                 onClick={() => setActiveSpecTab(tab.id)}
                 className={`px-6 py-3 rounded-lg font-body font-medium transition-all duration-300 ${
                   activeSpecTab === tab.id
-                    ? 'bg-gold-smoke text-carbon-black shadow-button'
-                    : 'bg-graphite-deep border border-titanium-gray/20 text-titanium-gray hover:bg-khaki-green/20 hover:text-warm-white hover:border-khaki-green/40'
+                    ? 'bg-warm-white text-carbon-black shadow-button'
+                    : 'bg-graphite-deep border border-titanium-gray/20 text-titanium-gray hover:bg-titanium-gray/20 hover:text-warm-white hover:border-titanium-gray/40'
                 }`}
               >
                 {tab.label}
@@ -583,7 +801,7 @@ function App() {
             <div className="bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Chassi</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Chassi</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <div className="font-body text-sm text-titanium-gray mb-1">Quadro</div>
@@ -597,7 +815,7 @@ function App() {
                 </div>
                 
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Suspensão</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Suspensão</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <div className="font-body text-sm text-titanium-gray mb-1">Dianteira</div>
@@ -611,7 +829,7 @@ function App() {
                 </div>
 
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Rodas & Pneus</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Rodas & Pneus</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <div className="font-body text-sm text-titanium-gray mb-1">Dianteira</div>
@@ -625,7 +843,7 @@ function App() {
                 </div>
 
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Freios</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Freios</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <div className="font-body text-sm text-titanium-gray mb-1">Dianteiro</div>
@@ -664,21 +882,21 @@ function App() {
             <div className="bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
               <div className="space-y-8">
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Iluminação</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Iluminação</h3>
                   <div className="font-body text-base text-warm-white">{specsData.equipamentos.iluminacao}</div>
                 </div>
                 
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Painel</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Painel</h3>
                   <div className="font-body text-base text-warm-white">{specsData.equipamentos.painel}</div>
                 </div>
 
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Sistemas de Segurança</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Sistemas de Segurança</h3>
                   <ul className="space-y-2">
                     {specsData.equipamentos.seguranca.map((item, index) => (
                       <li key={index} className="font-body text-base text-warm-white flex items-start">
-                        <span className="text-gold-smoke mr-2">•</span>
+                        <span className="text-warm-white mr-2">•</span>
                         {item}
                       </li>
                     ))}
@@ -686,7 +904,7 @@ function App() {
                 </div>
 
                 <div>
-                  <h3 className="font-display text-display-sm text-gold-smoke mb-4">Ergonomia</h3>
+                  <h3 className="font-display text-display-sm text-warm-white mb-4">Ergonomia</h3>
                   <div className="font-body text-base text-warm-white">{specsData.equipamentos.ergonomia}</div>
                 </div>
               </div>
@@ -695,7 +913,7 @@ function App() {
 
           {/* Características Diferenciais */}
           <div className="mt-8 bg-graphite-deep border border-titanium-gray/20 rounded-2xl p-6 md:p-10">
-            <h3 className="font-display text-display-sm text-gold-smoke mb-6">Características & Diferenciais</h3>
+            <h3 className="font-display text-display-sm text-warm-white mb-6">Características & Diferenciais</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {specsData.caracteristicas.map((caracteristica, index) => (
                 <div key={index} className="flex items-start">
@@ -773,12 +991,12 @@ function App() {
             {/* Informações da Concessionária */}
             <div className="space-y-6">
               <div>
-                <h3 className="font-display text-display-sm text-gold-smoke mb-4">
+                <h3 className="font-display text-display-sm text-warm-white mb-4">
                   Triumph Euro Motors - São José do Rio Preto
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-gold-smoke mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-warm-white mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -794,19 +1012,19 @@ function App() {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-gold-smoke mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-warm-white mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <div>
                       <p className="font-body text-warm-white font-medium mb-1">Telefone</p>
-                      <a href="tel:+551733541300" className="font-body text-titanium-gray hover:text-gold-smoke transition-colors">
+                      <a href="tel:+551733541300" className="font-body text-titanium-gray hover:text-warm-white transition-colors">
                         (17) 3354-1300
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-gold-smoke mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-warm-white mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
@@ -827,9 +1045,9 @@ function App() {
                   href="https://www.google.com/maps/search/?api=1&query=Triumph+São+José+do+Rio+Preto"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 bg-carbon-black/80 backdrop-blur-sm border border-gold-smoke/30 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-gold-smoke/60 hover:bg-carbon-black transition-all duration-300"
+                  className="group inline-flex items-center justify-center gap-2 bg-carbon-black/80 backdrop-blur-sm border border-titanium-gray/30 text-warm-white font-body font-semibold px-6 py-3 rounded-lg hover:border-titanium-gray/60 hover:bg-carbon-black transition-all duration-300"
                 >
-                  <svg className="w-5 h-5 text-gold-smoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-warm-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
                   <span>Abrir no Google Maps</span>
@@ -873,7 +1091,7 @@ function App() {
             </p>
             <a 
               href="https://github.com" 
-              className="font-body text-sm text-titanium-gray hover:text-gold-smoke transition-colors"
+              className="font-body text-sm text-titanium-gray hover:text-warm-white transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
